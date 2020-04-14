@@ -1,1 +1,39 @@
 Algoritmo "Áreas e Perímetros de Figuras Planas"
+Var
+
+   figura: inteiro
+   base, altura, area, l1, l2, l3, perimetro: real
+
+Inicio
+
+      escreval("Temos as seguintes figuras geométricas:")
+      escreval("1 - Triângulo")
+      escreval("2 - Retângulo")
+      escreval("3 - Quadrado")
+      escreval("4 - Trapézio")
+      escreval("5 - Círculo")
+      escreval("6 - Losango")
+      escreval("7 - Hexágono")
+      escreval
+      escreva("Para qual figura deseja calcular a área e o perímetro? ")
+      leia(figura)
+      escreval
+      
+      se figura = 1 entao
+         escreval("Triângulo: figura fechada e plana formado por três lados.")
+         escreval("Na maioria das situações, usamos as medidas da base e da altura de um triângulo para calcular a sua área.")
+         escreval("Por favor, forneça, em cm, as medias de base e altura, respectivamente:")
+         leia(base)
+         leia(altura)
+         escreval("O perímetro corresponde à soma de todos os lados do triângulo.")
+         escreval("Por favor, forneça, em cm, as medidas dos 3 lados:")
+         leia(l1)
+         leia(l2)
+         leia(l3)
+         
+         area <- base*altura/2
+         perimetro <- l1+l2+l3
+         escreval
+         escreval("Área = ", area:3:2,"cm²")
+         escreval("Perímetro = ", perimetro:3:2,"cm")
+      fimse
