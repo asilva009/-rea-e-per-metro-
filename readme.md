@@ -1,2 +1,2 @@
 # Áreas e Perímetros de Figuras Planas
-## Código criado no VISUAL
+## Código criado no VISUALG
