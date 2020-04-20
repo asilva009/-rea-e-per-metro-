@@ -23,12 +23,17 @@ Inicio
          escreval("Triângulo: figura fechada e plana formado por três lados.")
          escreval("Na maioria das situações, usamos as medidas da base e da altura de um triângulo para calcular a sua área.")
          escreval("Por favor, forneça, em cm, as medias de base e altura, respectivamente:")
+         escreva("Base = ")
          leia(base)
+         escreva("Altura = ")
          leia(altura)
          escreval("O perímetro corresponde à soma de todos os lados do triângulo.")
          escreval("Por favor, forneça, em cm, as medidas dos 3 lados:")
+         escreva("Lado 1 = ")
          leia(l1)
+         escreva("Lado 2 = ")
          leia(l2)
+         escreva("Lado 3 = ")
          leia(l3)
          
          area <- base*altura/2
