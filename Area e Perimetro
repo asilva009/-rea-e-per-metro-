@@ -42,3 +42,5 @@ Inicio
          escreval("Área = ", area:3:2,"cm²")
          escreval("Perímetro = ", perimetro:3:2,"cm")
       fimse
+
+fimalgoritmo
