@@ -2,45 +2,169 @@ Algoritmo "Áreas e Perímetros de Figuras Planas"
 Var
 
    figura: inteiro
-   base, altura, area, l1, l2, l3, perimetro: real
+   base, base2, altura, l1, l2, l3, l4, r, d1, d2, area, perimetro : real
 
 Inicio
 
       escreval("Temos as seguintes figuras geométricas:")
-      escreval("1 - Triângulo")
+      escreval("1 - Triângulo Isósceles")
       escreval("2 - Retângulo")
       escreval("3 - Quadrado")
       escreval("4 - Trapézio")
       escreval("5 - Círculo")
       escreval("6 - Losango")
-      escreval("7 - Hexágono")
+      escreval("7 - Hexágono regular")
       escreval
       escreva("Para qual figura deseja calcular a área e o perímetro? ")
       leia(figura)
       escreval
-      
-      se figura = 1 entao
-         escreval("Triângulo: figura fechada e plana formado por três lados.")
-         escreval("Na maioria das situações, usamos as medidas da base e da altura de um triângulo para calcular a sua área.")
-         escreval("Por favor, forneça, em cm, as medias de base e altura, respectivamente:")
+
+      escolha figura
+      caso 1
+         escreval("Triângulo Isósceles: figura fechada e plana que  possui dois")
+         escreval("                     lados e dois ângulos internos congruen-")
+         escreval("                     tes.")
+         escreval("                     Para calcular a  área  usamos as  medi-")
+         escreval("                     das  da base e da altura.")
+         escreval("Forneça, em cm, as medidas de base e altura:")
          escreva("Base = ")
          leia(base)
          escreva("Altura = ")
          leia(altura)
-         escreval("O perímetro corresponde à soma de todos os lados do triângulo.")
-         escreval("Por favor, forneça, em cm, as medidas dos 3 lados:")
+         escreval("Para calular o perímetro usamos as medidas dos lados.")
+         escreval("Forneça, em cm, as medidas dos 3 lados:")
          escreva("Lado 1 = ")
          leia(l1)
          escreva("Lado 2 = ")
          leia(l2)
          escreva("Lado 3 = ")
          leia(l3)
-         
-         area <- base*altura/2
-         perimetro <- l1+l2+l3
-         escreval
-         escreval("Área = ", area:3:2,"cm²")
-         escreval("Perímetro = ", perimetro:3:2,"cm")
-      fimse
 
+         area <- base * altura/ 2.0
+         perimetro <- l1 + l2 + l3
+         escreval
+         escreval("Área = ", area:3:2," cm²")
+         escreval("Perímetro = ", perimetro:3:2," cm")
+         
+      caso 2
+         escreval("Retângulo: figura fechada e plana formada por quatro lados.")
+         escreval("           Dois lados são congruentes e os outros dois tam-")
+         escreval("           bém. A base é o  lado de maior comprimento e al-")
+         escreval("           tura é o menor.")
+         escreval("           Para calcular a área e o perímetro  usamos essas")
+         escreval("           medidas.")
+         escreval("Forneça, em cm, as medidas de base e altura:")
+         escreva("Base = ")
+         leia(base)
+         escreva("Altura = ")
+         leia(altura)
+
+         area <- base * altura
+         perimetro <- 2.0 * (base + altura)
+         escreval
+         escreval("Área = ", area:3:2," cm²")
+         escreval("Perímetro = ", perimetro:3:2," cm")
+         
+      caso 3
+         escreval("Quadrado: figura fechada e plana formada por quatro lados")
+         escreval("          congruentes.")
+         escreval("          Para calcular a área e perímetro usamos a medi-")
+         escreval("          da de um dos lados.")
+         escreva("Forneça, em cm, a medida de um dos lados: ")
+         leia(l1)
+         
+         
+         area <- l1 * l1
+         perimetro <- 4.0 * l1
+         escreval
+         escreval("Área = ", area:3:2," cm²")
+         escreval("Perímetro = ", perimetro:3:2," cm")
+         
+      caso 4
+         escreval("Trapézio: figura  fechada e  plana  que possui dois lados e")
+         escreval("          duas bases paralelas, que  são  chamadas  de base")
+         escreval("          maior e base menor.")
+         escreval("          Para calcular a área usamos as  medidas das bases")
+         escreval("          e da altura.")
+         escreval("Forneça, em cm, essas medidas:")
+         escreva("Base Maior = ")
+         leia(base)
+         escreva("Base Menor = ")
+         leia(base2)
+         escreva("Altura = ")
+         leia(altura)
+         escreval("Para calcular o perímetro usamos as medidas das bases e dos")
+         escreval("lados.")
+         escreval("Forneça, em cm, as medidas dos lados:")
+         escreva("Lado 1 = ")
+         leia(l1)
+         escreva("Lado 2 = ")
+         leia(l2)
+         
+         area <- (base + base2) * altura / 2.0
+         perimetro <- base + base2 + l1 + l2
+         escreval
+         escreval("Área = ", area:3:2," cm²")
+         escreval("Perímetro = ", perimetro:3:2," cm")
+          
+
+      caso 5
+         escreval("Círculo: figura  plana e fechada  limitada  por  uma linha")
+         escreval("         curva chamada de circunferência.")
+         escreval("         Para  calcular a área e perímetro usamos a medida")
+         escreval("         do raio. Lembrando  que o raio corresponde a dis-")
+         escreval("         tância entre o centro e a extremidade do círculo,")
+         escreval("         que  também equivale a  metade do valor da medida")
+         escreval("         do diâmetro.")
+         escreval("Forneça, em cm, a medida do raio:")
+         escreva("Raio = ")
+         leia(r)
+         
+         area <- 3.14 * exp(r,2)
+         perimetro <- 2.0 * 3.14 * r
+         escreval
+         escreval("Área = ", area:3:2," cm²")
+         escreval("Perímetro = ", perimetro:3:2," cm")
+         
+      caso 6
+         escreval("Losango: figura plana e fechada composta de quatro lados.")
+         escreval("         Essa figura apresenta  lados e  ângulos  opostos")
+         escreval("         congruentes e paralelos, com duas diagonais  que")
+         escreval("         se cruzam perpendicularmente.")
+         escreval("         Para  calcular  a  área  usamos as  medidas  das")
+         escreval("         diagonais.")
+         escreval("Forneça, em cm, as medidas das diagonais:")
+         escreva("Diagonal 1 = ")
+         leia(d1)
+         escreva("Diagonal 2 = ")
+         leia(d2)
+         escreval("Para calcular o perímetro usamos a medida de um dos lados.")
+         escreva("Forneça, em cm, essa medida: ")
+         leia(l1)
+         
+         area <- d1 * d2 / 2.0
+         perimetro <- 4.0 * l1
+         escreval
+         escreval("Área = ", area:3:2," cm²")
+         escreval("Perímetro = ", perimetro:3:2," cm")
+         
+      caso 7
+         escreval("Hexágono regular: figura plana e fechada que possui 6 lados")
+         escreval("                  com a mesma medida.")
+         escreval("                  Para  calcular a  área e perímetro usamos")
+         escreval("                  a medida de um dos lados.")
+         escreva("Forneça, em cm, essa medida: ")
+         leia(l1)
+         
+         area <- 3.0 * exp(l1,2) * raizq(3.0) / 2.0
+         perimetro <- 6.0 * l1
+         escreval
+         escreval("Área = ", area:3:2," cm²")
+         escreval("Perímetro = ", perimetro:3:2," cm")
+         
+      fimescolha
+         
+         
+
+      
 fimalgoritmo
